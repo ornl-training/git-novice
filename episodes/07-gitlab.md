@@ -1,5 +1,5 @@
 ---
-title: Remotes in GitHub
+title: Remotes in GitLab
 teaching: 45
 exercises: 0
 ---
@@ -33,7 +33,7 @@ world. To this end we are going to create a *remote* repository that will be lin
 
 ## 1\. Create a remote repository
 
-Log in to [GitHub](https://github.com), then click on the icon in the top right corner to
+Log in to [code.ornl.gov](https://code.ornl.gov), then click on the icon in the top right corner to
 create a new repository called `recipes`:
 
 ![](fig/github-create-repo-01.png){alt='The first step in creating a repository on GitHub: clicking the "create new" button'}
@@ -52,7 +52,7 @@ information on how to configure your local repository:
 
 ![](fig/github-create-repo-03.png){alt='The summary page displayed by GitHub after a new repository has been created. It contains instructions for configuring the new GitHub repository as a git remote'}
 
-This effectively does the following on GitHub's servers:
+This effectively does the following on GitLab's servers:
 
 ```bash
 $ mkdir recipes
@@ -144,7 +144,7 @@ The first thing we are going to do is check if this has already been done on the
 ## Keeping your keys secure
 
 You shouldn't really forget about your SSH keys, since they keep your account secure. It's good
-practice to check your SSH keys every so often to ensure they are still secure, up to date, 
+practice to check your SSH keys every so often to ensure they are still secure, up to date,
 and that there are no unauthorized keys that could compromise your account.
 This is especially important if you are using multiple computers to access your account.
 
