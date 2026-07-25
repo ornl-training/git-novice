@@ -4,7 +4,7 @@
 # git-novice
 
 An introduction to version control for novices using Git.
-Please see [https://swcarpentry.github.io/git-novice/](https://swcarpentry.github.io/git-novice/) for a rendered version of this material,
+Please see [https://ornl-training.github.io/git-novice/](https://swcarpentry.ornl-training.io/git-novice/) for a rendered version of this material,
 or [the lesson template documentation][lesson-example] for instructions on formatting, building, and submitting material.
 
 Maintainers:

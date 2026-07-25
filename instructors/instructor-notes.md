@@ -77,7 +77,7 @@ working in teams or not, because it is
   widely used in the sciences right now.
 
 - Further resources:
-  
+
   - [git-it] is a self-paced command-line Git demo,
     with [git-it-electron] its GitHub Desktop successor.
   - [Code School][code-school] has a free interactive course, [Try Git][try-git].
@@ -102,11 +102,11 @@ working in teams or not, because it is
 
 - We suggest instructors and students use `nano` as the text editor for this
   lessons because
-  
+
   - it runs in all three major operating systems,
   - it runs inside the shell (switching windows can be confusing to students), and
   - it has shortcut help at the bottom of the window.
-  
+
   Please point out to students during setup that they can and should use
   another text editor if they're already familiar with it.
 
@@ -128,15 +128,15 @@ working in teams or not, because it is
   that the `.git` folder contains the whole Git repo and deleting this folder
   undoes a `git init`. It also gives the learner the way to fix the common
   mistake of putting unwanted folders (like `Desktop`) under version control.
-  
+
   Instead of removing the `.git` folder directly, you can choose to move it
   first to a safer directory and remove it from there:
-  
+
   ```bash
   $ mv .git temp_git
   $ rm -rf  temp_git
   ```
-  
+
   The challenge suggests that it is a bad idea to create a Git repo inside another repo.
   For more discussion on this topic, please see [this issue][repos-in-repos].
 
@@ -167,10 +167,10 @@ working in teams or not, because it is
 Just remember that you can use wildcards and regular expressions to ignore a
 particular set of files in `.gitignore`.
 
-## [Remotes in GitHub](../episodes/07-github.md)
+## [Remotes in GitLab](../episodes/07-gitlab.md)
 
-- Make it clear that Git and GitHub are not the same thing: Git is an open
-  source version control tool, GitHub is a company that hosts Git
+- Make it clear that Git and GitLab are not the same thing: Git is an open
+  source version control tool, GitLab is a company that hosts Git
   repositories in the web and provides a web interface to interact with repos
   they host.
 
@@ -181,126 +181,9 @@ particular set of files in `.gitignore`.
   what leaners execute. The lesson displays the output from git if a learner
   executes `git push origin main`. However, some learners might use syntax
   suggested by GitHub for pushing to a remote with an existing repository,
-  which is `git push -u origin main`. Learners using syntax from GitHub,
+  which is `git push -u origin main`. Learners using syntax from GitLab,
   `git push -u origin main`, will have slightly different output, including
   the line `Branch main set up to track remote branch main from origin by rebasing.`
-
-## [Collaborating](../episodes/08-collab.md)
-
-- Decide in advance whether all the learners will work in one shared
-  repository, or whether they will work in pairs (or other small groups) in
-  separate repositories.  The former is easier to set up; the latter runs
-  more smoothly.
-
-- Role playing between two instructors can be effective when teaching the
-  collaboration and conflict sections of the lesson.  One instructor can play
-  the role of the repository owner, while the second instructor can play the
-  role of the collaborator.  If it is possible, try to use two projectors so
-  that the computer screens of both instructors can be seen.  This makes for
-  a very clear illustration to the students as to who does what.
-
-- It is also effective to pair up students during this lesson and assign one
-  member of the pair to take the role of the owner and the other the role of
-  the collaborator.  In this setup, challenges can include asking the
-  collaborator to make a change, commit it, and push the change to the remote
-  repository so that the owner can then retrieve it, and vice-versa.  The
-  role playing between the instructors can get a bit "dramatic" in the
-  conflicts part of the lesson if the instructors want to inject some humor
-  into the room.
-
-- If you don't have two projectors, have two instructors at the front of the
-  room.  Each instructor does their piece of the collaboration demonstration
-  on their own computer and then passes the projector cord back and forth
-  with the other instructor when it's time for them to do the other part of
-  the collaborative workflow.  It takes less than 10 seconds for each
-  switchover, so it doesn't interrupt the flow of the lesson.
-  And of course it helps to give each of the instructors a different-colored
-  hat, or put different-colored sticky notes on their foreheads.
-
-- If you're the only instructor, the best way to create is clone the two
-  repos in your Desktop, but under different names, e.g., pretend one is your
-  computer at work:
-  
-  ```bash
-  $ git clone https://github.com/alflin/recipes.git recipes-at-work
-  ```
-
-- It's very common that learners mistype the remote alias or the remote URL
-  when adding a remote, so they cannot `push`. You can diagnose this with
-  `git remote -v` and checking carefully for typos.
-  
-  - To fix a wrong alias, you can do `git remote rename <old> <new>`.
-  - To fix a wrong URL, you can do `git remote set-url <alias> <newurl> `.
-
-- Before cloning the repo, be sure that nobody is inside another repo. The
-  best way to achieve this is moving to the `Desktop` before cloning: `cd && cd Desktop`.
-
-- If both repos are in the `Desktop`, have them to clone their collaborator
-  repo under a given directory using a second argument:
-  
-  ```bash
-  $ git clone https://github.com/alflin/recipes.git alflin-recipes
-  ```
-
-- The most common mistake is that learners `push` before `pull`ing. If they
-  `pull` afterward, they may get a conflict.
-
-- Conflicts, sometimes weird, will start to arise. Stay tight: conflicts are
-  next.
-
-- Learners may have slightly different output from `git push` and `git pull`
-  depending on the version of git, and if upstream (`-u`) is used.
-
-## [Conflicts](../episodes/09-conflict.md)
-
-- Expect the learners to make mistakes. Expect *yourself* to make mistakes.
-  This happens because it is late in the lesson and everyone is tired.
-
-- If you're the only instructor, the best way to create a conflict is:
-  
-  - Clone your repo in a different directory, pretending is your computer at
-    work: `git clone https://github.com/alflin/recipes.git recipes-at-work`.
-  - At the office, you make a change, commit and push.
-  - At your laptop repo, you (forget to pull and) make a change, commit and
-    try to push.
-  - `git pull` now and show the conflict.
-
-- Learners usually forget to `git add` the file after fixing the conflict and
-  just (try to) commit. You can diagnose this with `git status`.
-
-- Remember that you can discard one of the two parents of the merge:
-  
-  - discard the remote file, `git checkout --ours conflicted_file.txt`
-  - discard the local file, `git checkout --theirs conflicted_file.txt`
-  
-  You still have to `git add` and `git commit` after this. This is
-  particularly useful when working with binary files.
-
-- Keep in mind that depending on the Git version used, the outputs for
-  `git push` and `git pull` can vary slightly.
-
-## [Open Science](../episodes/10-open.md)
-
-## [Licensing](../episodes/11-licensing.md)
-
-We teach about licensing because questions about who owns what, or can use
-what, arise naturally once we start talking about using public services like
-GitHub to store files. Also, the discussion gives learners a chance to catch
-their breath after what is often a frustrating couple of hours.
-
-The Creative Commons family of licenses is recommended for many types of
-works (including software documentation and images used in software) but not
-software itself. Creative Commons [recommends][cc-faq-software] a
-software-specific license instead.
-
-## [Citation](../episodes/12-citation.md)
-
-## [Hosting](../episodes/13-hosting.md)
-
-A common concern for learners is having their work publicly available on
-GitHub.  While we encourage open science, sometimes private repos are the
-only choice. It's always interesting to mention the options to have
-web-hosted private repositories.
 
 [github]: https://github.com/
 [drawings]: https://marklodato.github.io/visual-git-guide/index-en.html

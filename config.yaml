@@ -27,13 +27,13 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/swcarpentry/git-novice'
+source: 'https://github.com/ornl-training/git-novice'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org'
+contact: 'dugganjw@ornl.gov'
 
 # Navigation ------------------------------------------------
 #
@@ -58,30 +58,23 @@ contact: 'team@carpentries.org'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - 01-basics.md
 - 02-setup.md
 - 03-create.md
 - 04-changes.md
 - 05-history.md
 - 06-ignore.md
-- 07-github.md
-- 08-collab.md
-- 09-conflict.md
-- 10-open.md
-- 11-licensing.md
-- 12-citation.md
-- 13-hosting.md
-- 14-supplemental-rstudio.md
+- 07-gitlab.md
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
@@ -89,6 +82,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: 'https://swcarpentry.github.io/git-novice'
+url: 'https://ornl-training.github.io/git-novice'
 analytics: carpentries
 lang: en

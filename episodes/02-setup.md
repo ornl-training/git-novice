@@ -36,22 +36,13 @@ $ git config --global user.email "a.linguini@ratatouille.fr"
 
 Please use your own name and email address instead of Alfredo's. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
+[code.ornl.gov](https://code.ornl.gov),
 [GitHub](https://github.com/),
-[BitBucket](https://bitbucket.org/),
-[GitLab](https://gitlab.com/) or
+[BitBucket](https://bitbucket.org/) or
 another Git host server
 after this lesson will include this information.
 
-For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy].
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Keeping your email private
-
-If you elect to use a private email address with GitHub, then use GitHub's no-reply email address for the `user.email` value. It looks like `ID+username@users.noreply.github.com`. You can look up your own address in your GitHub [email settings](https://github.com/settings/emails).
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+For this lesson, we will be interacting with [code.ornl.gov](https://code.ornl.gov) and so the email address should be your work email.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -86,23 +77,23 @@ $ git config --global core.autocrlf true
 
 Alfredo also has to set his favorite text editor, following this table:
 
-| Editor                                | Configuration command | 
+| Editor                                | Configuration command |
 | :-----------                          | :------------------------------ |
-| Atom                                  | `$ git config --global core.editor "atom --wait"`                      | 
-| nano                                  | `$ git config --global core.editor "nano -w"`                      | 
-| BBEdit (Mac, with command line tools) | `$ git config --global core.editor "bbedit -w"`                      | 
-| Sublime Text (Mac)                    | `$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"`                      | 
-| Sublime Text (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"`                      | 
-| Sublime Text (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"`                      | 
-| Notepad (Win)                         | `$ git config --global core.editor "c:/Windows/System32/notepad.exe"`                      | 
-| Notepad++ (Win, 32-bit install)       | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`                      | 
-| Notepad++ (Win, 64-bit install)       | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`                      | 
-| Kate (Linux)                          | `$ git config --global core.editor "kate"`                      | 
-| Gedit (Linux)                         | `$ git config --global core.editor "gedit --wait --new-window"`                      | 
-| Scratch (Linux)                       | `$ git config --global core.editor "scratch-text-editor"`                      | 
-| Emacs                                 | `$ git config --global core.editor "emacs"`                      | 
-| Vim                                   | `$ git config --global core.editor "vim"`                      | 
-| VS Code                               | `$ git config --global core.editor "code --wait"`                      | 
+| Atom                                  | `$ git config --global core.editor "atom --wait"`                      |
+| nano                                  | `$ git config --global core.editor "nano -w"`                      |
+| BBEdit (Mac, with command line tools) | `$ git config --global core.editor "bbedit -w"`                      |
+| Sublime Text (Mac)                    | `$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"`                      |
+| Sublime Text (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"`                      |
+| Sublime Text (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"`                      |
+| Notepad (Win)                         | `$ git config --global core.editor "c:/Windows/System32/notepad.exe"`                      |
+| Notepad++ (Win, 32-bit install)       | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`                      |
+| Notepad++ (Win, 64-bit install)       | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`                      |
+| Kate (Linux)                          | `$ git config --global core.editor "kate"`                      |
+| Gedit (Linux)                         | `$ git config --global core.editor "gedit --wait --new-window"`                      |
+| Scratch (Linux)                       | `$ git config --global core.editor "scratch-text-editor"`                      |
+| Emacs                                 | `$ git config --global core.editor "emacs"`                      |
+| Vim                                   | `$ git config --global core.editor "vim"`                      |
+| VS Code                               | `$ git config --global core.editor "code --wait"`                      |
 
 It is possible to reconfigure the text editor for Git whenever you want to change it.
 
@@ -130,7 +121,7 @@ $ git config --global init.defaultBranch main
 ## Default Git branch naming
 
 Source file changes are associated with a "branch."
-For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.  
+For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
 By default, Git will create a branch called `master`
 when you create a new repository with `git init` (as explained in the next Episode). This term evokes
 the racist practice of human slavery and the

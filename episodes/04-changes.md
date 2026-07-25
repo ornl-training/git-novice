@@ -543,7 +543,7 @@ screen is a `:`, instead of your usual prompt.
   press <kbd>/</kbd>
   and type `some_word`.
   Navigate through matches pressing <kbd>N</kbd>.
-  
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -607,14 +607,14 @@ Two important facts you should know about directories in Git.
 
 1. Git does not track directories on their own, only files within them.
   Try it for yourself:
-  
+
   ```bash
   $ mkdir cakes
   $ git status
   $ git add cakes
   $ git status
   ```
-  
+
   Note, our newly created empty directory `cakes` does not appear in
   the list of untracked files even if we explicitly add it (*via* `git add`) to our
   repository. This is the reason why you will sometimes see `.gitkeep` files
@@ -622,16 +622,16 @@ Two important facts you should know about directories in Git.
 
 2. If you create a directory in your Git repository and populate it with files,
   you can add all the files in the directory at once by referring to the directory in your `git add` command. Try it for yourself:
-  
+
   ```bash
   $ touch cakes/brownie cakes/lemon_drizzle
   $ git status
   $ git add cakes
   $ git status
   ```
-  
+
   Before moving on, we will commit these changes.
-  
+
   ```bash
   $ git commit -m "Add some initial cakes"
   ```
@@ -700,8 +700,8 @@ to my local Git repository?
 2. Would try to create a new repository.
 3. Is correct: first add the file to the staging area, then commit.
 4. Would try to commit a file "my recent changes" with the message myfile.txt.
-  
-  
+
+
 
 :::::::::::::::::::::::::
 
